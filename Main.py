@@ -613,7 +613,6 @@ def lq(member: discord.Member):
 	conn = sqlite3.connect(DB_PATH)	
 	c = conn.cursor()
 	t = (member.id,)
-	print(t);
 	quoteslist = c.execute('SELECT Quote FROM Quotes WHERE ID=?',t).fetchall()
 	msg = "```Quotes: \n"
 	for i in range(len(quoteslist)):
